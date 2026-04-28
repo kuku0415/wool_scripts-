@@ -1,10 +1,7 @@
-[rewrite_local]
+#[rewrite_local]
 
 ^https:\/\/([0-9a-z]+\.)?kelee\.one[^\s]*\.(js|sgmodule|conf|lcf|json|plugin|lpx)$ url response-header (\r\n)Content-Type:.*(\r\n) response-header $1Content-Type: text/plain;charset=utf-8$2
 
 ^https:\/\/([0-9a-z]+\.)?kelee\.one[^\s]*\.(js|sgmodule|conf|lcf|json|plugin|lpx)$ url request-header (\r\n)User-Agent:.*(\r\n) request-header $1User-Agent: script-hub/1.0.0$2
 
 hostname=kelee.one
-
-^https:\/\/([0-9a-z]+\.)?kelee\.one[^\s]*\.(js|sgmodule|conf|lcf|json|plugin|lpx)$ url response-header (\r\n)Content-Type:.*(\r\n) response-header $1Content-Type: text/plain;charset=utf-8$2
-^https:\/\/([0-9a-z]+\.)?kelee\.one[^\s]*\.(js|sgmodule|conf|lcf|json|plugin|lpx)$ url request-header (\r\n)User-Agent:.*(\r\n) request-header $1User-Agent: script-hub/1.0.0$2
